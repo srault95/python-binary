@@ -57,5 +57,5 @@ mkdir -vp ${TARGET_ARCHIVE_DIR}
 
 rm -vf ${TARGET_ARCHIVE_PATH}
 
-tar -czvf ${TARGET_ARCHIVE_PATH} ${TARGET}
+tar -czf ${TARGET_ARCHIVE_PATH} ${TARGET}
 
