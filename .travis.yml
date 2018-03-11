@@ -12,15 +12,15 @@ before_install:
 
 script:
 - docker run --rm -v $PWD:/app -w /app astj/centos5-vault /app/build-python-2.7.sh
+- find build
 
-after_script:
-- mv build/python2.7-x86-64.tar.gz $TRAVIS_BUILD_DIR
+#TRAVIS_BUILD_DIR=/home/travis/build/srault95/python-binary
 
 deploy:
   provider: releases
   api_key:
     secure: qFArBflpq4bkLCcReb4dwVpJp8gZtKWRbrcf2czzIPla9s+h0SAy9A5V9nSxvg5HVbzdmdQF9CMZEdS5nCOLLawAJDY+R6YqDelAB5UArafmKKpFtGCr7agcbR3GDYyJOGkXrDc4h9DwkhKOnklybZJpotFMRfVz+CKvstRax2TlpdQBbLnEXzAyqgQ5SzLxOjkSGYxAtu772kcH+O3cnkO8tNZu4d2cP2YCeIH5FX93Bi208QLdF8bbWQBmD22chvykJ7LM+J4J8GFakJjDrZ9oimFAajtixA7WVUfEoDTpMIn18+CDtAXkF4ulZ4hUPlIZEa7r3IRhvoQLlyfqQcQG2/oVeiJER1R2/RiEnzTsYgViogPtc/8+RhBEnvflnQq8/VjisExU4fmvKc7m3hW/Jirf1R/Pw1Ljv2IMtj1T8MJxh47htLvmXGHEY1x5rLrMnpjpi30Bi8/6Vj/wlEDHQsAcUEzlITlcVhD9qUwAHZmKN8EXcOEVIcZbffgril9kI55g++4moAG3WcU9GrNcDrK0foKlFeZ2szvYlCA4qExwygt2+V0opBuXO1f/ZboO+j+F1mhUKuPmKOD2sr8EH8NJP3BTjhuheeviLb0ArU1n837FlvefFYl1gJRDChu+ABNFdUE9dVjA/uQEcFpssK17PMQ2QdBXFRGWQYU=
-  file: python2.7-x86-64.tar.gz
+  file: build/python2.7-x86-64.tar.gz
   skip_cleanup: true
   on:
     branch: master
