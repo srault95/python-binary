@@ -8,13 +8,14 @@ services:
 before_install:
 - docker pull astj/centos5-vault
 - docker version
-- env
 
 script:
 - docker run --rm -v $PWD:/app -w /app astj/centos5-vault /app/build-python-2.7.sh
-- find build
 
-#TRAVIS_BUILD_DIR=/home/travis/build/srault95/python-binary
+before_deploy:
+  - git config --local user.name "srault95"
+  - git config --local user.email "stephane.rault@radicalspam.org"
+  - git tag "$(head -1 version)"
 
 deploy:
   provider: releases
@@ -23,4 +24,4 @@ deploy:
   file: build/python2.7-x86-64.tar.gz
   skip_cleanup: true
   on:
-    branch: master
+    tags: true
