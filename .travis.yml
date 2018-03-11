@@ -24,4 +24,4 @@ deploy:
   file: build/python2.7-x86-64.tar.gz
   skip_cleanup: true
   on:
-    tags: true
+    branch: master
