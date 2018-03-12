@@ -4,7 +4,7 @@
 
 **Construction d'un Python 2.7 sans dépendances**
 
-> Python 2.7.14 64bits est compilé sous **Centos 5** pour garantir une compatiblité avec la GLIBC 2.6.32 (Centos5+, RHEL5+, Ubuntu:14+, Debian:8+)
+> Python 2.7.14 64bits est compilé sous **Centos 5** pour garantir une compatibilité avec la GLIBC 2.6.32 (Centos5+, RHEL5+, Ubuntu:14+, Debian:8+)
 
 ## Utilisation
 
@@ -16,11 +16,18 @@ $ tar -xzf python2.7-x86-64.tar.gz -C /
 
 $ export LD_LIBRARY_PATH=/usr/local/python2.7/lib
 $ /usr/local/python2.7/bin/python -V
+
+# OR
+$ LD_LIBRARY_PATH=/usr/local/python2.7/lib /usr/local/python2.7/bin/python -V
+
+# OR Permanent link
+$ echo "/usr/local/python2.7/lib" > /etc/ld.so.conf.d/python27.conf
+$ ldconfig
 ```
 
 > pip et virtualenv sont également disponibles dans /usr/local/python2.7/bin
 
-## Paramètres de compilation de Python 2.7.14
+## Paramètres de compilation utilisé pour Python 2.7.14
 
 > Le python est compilé avec un OpenSSL 1.0.2n.
 
@@ -41,3 +48,11 @@ echo "SSL=/usr/local/openssl" > Modules/Setup.local
 
 make && make install
 ```
+
+## TODO
+
+- Script bash d'installation
+- Tests multi plateforme dans travis
+- Module python pour tester les dépendances (ssl, db, ...)
+- Faire la même chose avec Python 3.5+
+- Version Windows ?
