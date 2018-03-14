@@ -1,6 +1,6 @@
 # Python Portable Build
 
-[![Travis](https://img.shields.io/travis/srault95/python-binary.svg)](https://github.com/srault95/python-binary)
+[![Travis](https://img.shields.io/travis/srault95/python-binary.svg)](https://travis-ci.org/srault95/python-binary)
 
 **Construction de Python sans dépendances**
 
