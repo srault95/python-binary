@@ -10,7 +10,7 @@
 
 
 ```
-$ curl -L -O -k https://github.com/srault95/python-binary/releases/download/0.1.0/python3.5-x86-64.tar.gz
+$ curl -L -O -k https://github.com/srault95/python-binary/releases/download/0.2.0/python3.5-x86-64.tar.gz
 
 # Python sera disponible dans /usr/local/python3.5
 $ tar -xzf python3.5-x86-64.tar.gz -C /
@@ -32,7 +32,7 @@ $ ldconfig
 ## Utilisation - Python 2.7
 
 ```
-$ curl -L -O -k https://github.com/srault95/python-binary/releases/download/0.1.0/python2.7-x86-64.tar.gz 
+$ curl -L -O -k https://github.com/srault95/python-binary/releases/download/0.2.0/python2.7-x86-64.tar.gz 
 
 # Python sera disponible dans /usr/local/python2.7
 $ tar -xzf python2.7-x86-64.tar.gz -C /
